@@ -18,6 +18,38 @@
   background-color: #fff;
   position: relative;
 }
+.quiz-app .input-question {
+  display: flex;
+  flex-direction: column;
+}
+.quiz-app button {
+  margin: 20px auto;
+}
+.quiz-app input {
+  padding: 10px;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  margin: 8px auto;
+  max-width: 320px;
+  width: 100%;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+.quiz-app .btn-step {
+  font-weight: bold;
+  font-family: "Nunito", sans-serif;
+  border-radius: 28px;
+  border: 0;
+  padding: 8px 24px;
+  font-size: 20px;
+  background-color: #e0749e;
+  color: #fff;
+  margin-top: 20px;
+  cursor: pointer;
+}
+.quiz-app .btn-step:hover {
+  background-color: #f00067;
+}
 .quiz-app .result {
   text-align: center;
 }

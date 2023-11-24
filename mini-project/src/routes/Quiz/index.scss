@@ -20,6 +20,40 @@
   background-color: #fff;
   position: relative;
 
+
+  .input-question {
+    display: flex;
+    flex-direction: column;
+  }
+  button {
+    margin: 20px auto
+  }
+  input {
+    padding: 10px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin: 8px auto;
+    max-width: 320px;
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+  }
+  .btn-step{
+    font-weight: bold;
+    font-family: 'Nunito', sans-serif;
+    border-radius: 28px;
+    border: 0;
+    padding: 8px 24px;
+    font-size: 20px;
+    background-color: darken(#e381a7, 3%);
+    color: #fff;
+    margin-top: 20px;
+    cursor: pointer;
+  }
+  .btn-step:hover {
+    background-color: darken(#ff006e, 3%);
+  }
+
   .result {
     text-align: center;
 
