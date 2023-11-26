@@ -14,5 +14,9 @@ export const menu = [
     {
         label: <NavLink to='/quiz' className={active}>Quiz</NavLink>,
         key: 'quiz',
-    }
+    },
+    {
+        label: <NavLink to='/users' className={active}>Users</NavLink>,
+        key: 'users',
+    },
 ]
