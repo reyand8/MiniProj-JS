@@ -1,24 +1,24 @@
 import React from 'react';
 import {Button, Dropdown} from "antd";
-import {EditOutlined} from "@ant-design/icons";
+import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
 import {useDispatch} from "react-redux";
 import {useNavigate} from "react-router-dom";
-import {deleteUser} from "../../store/actions";
+import {createEditUser, deleteUser} from "../../store/actions";
 
 
 export function User({obj, onClickInvite, isInvited}) {
     const dispatch = useDispatch()
     const navigate = useNavigate()
-    // const items = menuActions(dispatch, navigate, obj)
     const {firstName, lastName, avatar, email, id} = obj
     function onDeleteClick(user) {
         dispatch(deleteUser(user))
     }
 
     function onEditBtnClick(user) {
-        navigate(`/waiters/${user.id}/edit/`)
+        dispatch(createEditUser(user))
+        navigate(`/users/${user.id}/edit/`)
     }
-    console.log(obj)
+
     return (
 
         <li>
@@ -49,6 +49,7 @@ export function User({obj, onClickInvite, isInvited}) {
                                     key: '1',
                                     label:
                                         <Button onClick={() => onEditBtnClick(obj)} type="link">
+                                            <EditOutlined />
                                             Edit
                                         </Button>
                                 },
@@ -56,7 +57,8 @@ export function User({obj, onClickInvite, isInvited}) {
                                     key: '2',
                                     label:
                                     <Button onClick={() => onDeleteClick(obj)} danger type="text">
-                                    Delete
+                                        <DeleteOutlined />
+                                        Delete
                                     </Button>
                                 }
                         ]}}

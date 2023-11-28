@@ -19,6 +19,10 @@ export class UserApi {
         return UserApi.request('Can`t get users from server!')
     }
 
+    static getOne(id){
+        return UserApi.request('Can not get one user from server!', id)
+    }
+
     static create(data){
         return UserApi.request('Can`t create user on server!', '', 'POST', data)
     }

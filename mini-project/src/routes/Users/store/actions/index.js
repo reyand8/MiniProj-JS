@@ -7,7 +7,6 @@ export const ACTION_CREATE_EDIT = 'ACTION_CREATE_EDIT'
 export const ACTION_SET_LIST = 'ACTION_SET_LIST'
 
 
-
 export function fetchUserList() {
     return (dispatch) => {
         UserApi.getList()
@@ -16,7 +15,13 @@ export function fetchUserList() {
             })
     }
 }
-
+export function fetchOneUser(id) {
+    return (dispatch) => {
+        UserApi.getOne(id).then((user) => {
+            dispatch(createEditUser(user))
+        })
+    }
+}
 export function deleteUser(user) {
     return (dispatch) => {
         UserApi.delete(user.id)
@@ -25,6 +30,7 @@ export function deleteUser(user) {
             })
     }
 }
+
 
 export function save(user) {
     return (dispatch) => {
@@ -54,8 +60,8 @@ export function remove(user) {
     return {type: ACTION_DELETE_USER, payload: user}
 }
 
-export function setUserList(list) {
-    return {type: ACTION_SET_LIST, payload: list}
+export function setUserList(serverList) {
+    return {type: ACTION_SET_LIST, payload: serverList}
 }
 
 export function createEditUser(user) {

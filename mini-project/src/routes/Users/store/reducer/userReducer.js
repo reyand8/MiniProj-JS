@@ -10,6 +10,7 @@ export const DEFAULT_DATA = {
     firstName: '',
     lastName: '',
     email: '',
+    avatar: '',
 }
 
 const initialState = {
