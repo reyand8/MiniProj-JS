@@ -15,7 +15,7 @@ export const Users = ({ items, isLoading, searchValue, onChangeSearchValue,
                 <input value={searchValue}
                        onChange={onChangeSearchValue}
                        type="text"
-                       placeholder="Найти пользователя..." />
+                       placeholder="Search a user..." />
             </div>
             {isLoading ? (
                 <div className="skeleton-list">
@@ -35,7 +35,7 @@ export const Users = ({ items, isLoading, searchValue, onChangeSearchValue,
                 </ul>
             )}
             {invites.length > 0 && (
-                <button onClick={onClickSendInvites} className="user-btn invite-btn">Отправить приглашение</button>
+                <button onClick={onClickSendInvites} className="user-btn invite-btn">Send the invitation</button>
             )}
         </>
     )

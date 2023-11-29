@@ -13,7 +13,6 @@ const Modal = ({open, setOpen, children}) => (
     </div>
 )
 
-
 export default function Counter() {
     const [count, setCount] = useState(0)
     const [open, setOpen] = useState(false)

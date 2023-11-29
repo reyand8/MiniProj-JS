@@ -1,6 +1,7 @@
 import React from "react";
 import {Button} from "antd";
 import {deleteUser} from '../../store/actions/index'
+
 export function menuActions({dispatch, navigate, user}) {
 
     function onDeleteClick(user) {

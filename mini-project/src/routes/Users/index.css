@@ -205,5 +205,13 @@ body {
     transform: scale(1);
   }
 }
+@media screen and (max-width: 450px) {
+  .user-list__info {
+    font-size: 12px;
+  }
+  .users-list li p {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=index.css.map */

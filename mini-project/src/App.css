@@ -1,3 +1,7 @@
+.ant-layout {
+    background-color: #dfe2ff;
+}
+
 .ant-layout-header,
 .ant-menu {
     font-weight: bold;

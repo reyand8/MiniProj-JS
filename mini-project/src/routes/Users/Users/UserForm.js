@@ -81,7 +81,6 @@ export default function UserForm() {
                             <Input />
                         </Form.Item>
                     </div>
-
                     <div>
                     <p>Surname</p>
                     <Form.Item
@@ -124,9 +123,7 @@ export default function UserForm() {
                             </Button>
                         </Form.Item>
                     </div>
-
                 </Form>
-
     )
 }
 
