@@ -7,6 +7,7 @@ import Counter from './routes/Counter/index'
 import Quiz from "./routes/Quiz"
 import './App.css'
 import UserRoutes from "./routes/Users/Users/UserRoutes";
+import Gallery from "./routes/Gallery/Gallery";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
                       <Route path='/counter/' element={<Counter />}/>
                       <Route path='/quiz/' element={<Quiz />}/>
                       <Route path='/users/*' element={<UserRoutes/>}/>
+                      <Route path='/gallery/' element={<Gallery/>}/>
                       {/*<Route path='/*' element={<NotFound/>}/>*/}
                   </Routes>
               </Layout.Content>

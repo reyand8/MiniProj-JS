@@ -19,4 +19,8 @@ export const menu = [
         label: <NavLink to='/users' className={active}>Users</NavLink>,
         key: 'users',
     },
+    {
+        label: <NavLink to='/gallery' className={active}>Gallery</NavLink>,
+        key: 'gallery',
+    },
 ]
