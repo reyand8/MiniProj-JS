@@ -50,7 +50,7 @@ const questions = [
 
 function Result({correct}) {
     return (
-        <div className="result">
+        <div className="quiz__result">
             <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt='result-img'/>
             <h2>You have {correct} points of {questions.length}</h2>
             <a href="/quiz/">
@@ -85,9 +85,9 @@ function Game({step, question, onClickVariant}) {
         }
         else if (type === 'input') {
             question =
-                    <form className='input-question' onSubmit={onSubmit}>
+                    <form className='quiz__input-question' onSubmit={onSubmit}>
                         <input maxLength="4" type='text' value={input} onChange={onInputChange} key={7771}/>
-                        <button className='btn-step'>Next Step</button>
+                        <button className='quiz__btn-step'>Next Step</button>
                     </form>
         }
         return question
@@ -95,8 +95,8 @@ function Game({step, question, onClickVariant}) {
 
     return (
         <>
-            <div className="progress">
-                <div style={{ width: `${percentage}%` }} className="progress__inner"></div>
+            <div className="quiz__progress">
+                <div style={{ width: `${percentage}%` }} className="quiz__progress_inner"></div>
             </div>
             <h1>{title}</h1>
             {askQuestions()}
@@ -115,8 +115,8 @@ function Quiz() {
         }
     }
     return (
-        <div className='quiz-main'>
-            <div className="quiz-app">
+        <div className='quiz__quiz-main'>
+            <div className="quiz__quiz-app">
                 {
                     step !== questions.length ?
                         (<Game step={step} question={question} onClickVariant={onClickVariant}/>) :

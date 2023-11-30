@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;700&display=swap");
-.quiz-main {
+.quiz__quiz-main {
   margin: 0;
   font-family: "Nunito", sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -11,21 +11,21 @@
   height: 100vh;
 }
 
-.quiz-app {
+.quiz__quiz-app {
   width: 500px;
   border-radius: 30px;
   padding: 40px;
   background-color: #fff;
   position: relative;
 }
-.quiz-app .input-question {
+.quiz__quiz-app .quiz__input-question {
   display: flex;
   flex-direction: column;
 }
-.quiz-app button {
+.quiz__quiz-app button {
   margin: 20px auto;
 }
-.quiz-app input {
+.quiz__quiz-app input {
   padding: 10px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 20px;
@@ -35,7 +35,7 @@
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
-.quiz-app .btn-step {
+.quiz__quiz-app .quiz__btn-step {
   font-weight: bold;
   font-family: "Nunito", sans-serif;
   border-radius: 28px;
@@ -47,13 +47,13 @@
   margin-top: 20px;
   cursor: pointer;
 }
-.quiz-app .btn-step:hover {
+.quiz__quiz-app .quiz__btn-step:hover {
   background-color: #f00067;
 }
-.quiz-app .result {
+.quiz__quiz-app .quiz__result {
   text-align: center;
 }
-.quiz-app .result button {
+.quiz__quiz-app .quiz__result button {
   font-weight: bold;
   font-family: "Nunito", sans-serif;
   border-radius: 30px;
@@ -65,19 +65,19 @@
   margin-top: 20px;
   cursor: pointer;
 }
-.quiz-app .result h2 {
+.quiz__quiz-app .quiz__result h2 {
   margin-bottom: 0;
 }
-.quiz-app .result img {
+.quiz__quiz-app .quiz__result img {
   width: 150px;
 }
-.quiz-app .progress {
+.quiz__quiz-app .quiz__progress {
   height: 10px;
   border-radius: 30px;
   background-color: rgb(232, 232, 232);
   margin-bottom: 25px;
 }
-.quiz-app .progress__inner {
+.quiz__quiz-app .quiz__progress__inner {
   height: 100%;
   border-radius: 30px;
   width: 80%;
@@ -85,7 +85,7 @@
   transition: all 0.3s ease-in-out;
   background: linear-gradient(90deg, rgb(18, 231, 48) 0%, rgb(0, 212, 255) 100%);
 }
-.quiz-app:before, .quiz-app:after {
+.quiz__quiz-app:before, .quiz__quiz-app:after {
   content: "";
   display: block;
   height: 50px;
@@ -95,26 +95,26 @@
   left: 50%;
   transform: translateX(-50%);
 }
-.quiz-app:before {
+.quiz__quiz-app:before {
   width: 95%;
   bottom: -10px;
   background-color: rgba(255, 255, 255, 0.8);
   z-index: 0;
 }
-.quiz-app:after {
+.quiz__quiz-app:after {
   width: 90%;
   bottom: -20px;
   background-color: rgba(255, 255, 255, 0.3);
   z-index: 1;
 }
-.quiz-app h1 {
+.quiz__quiz-app h1 {
   margin: 0;
 }
-.quiz-app ul {
+.quiz__quiz-app ul {
   list-style: none;
   padding: 0;
 }
-.quiz-app ul li {
+.quiz__quiz-app ul li {
   padding: 15px;
   border: 2px solid rgba(0, 0, 0, 0.1);
   border-radius: 15px;
@@ -122,7 +122,7 @@
   cursor: pointer;
   transition: all 0.1s ease-in-out;
 }
-.quiz-app ul li:hover {
+.quiz__quiz-app ul li:hover {
   border: 2px solid rgba(0, 0, 0, 0.3);
 }
 

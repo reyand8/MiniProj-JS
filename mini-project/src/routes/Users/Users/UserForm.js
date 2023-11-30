@@ -34,31 +34,31 @@ export default function UserForm() {
     if (id && !userEdit?.id) {
         console.log(userEdit?.id)
         return (
-            <div className='data-loading'>
+            <div className='users__data-loading'>
                 <Space>
                     <Spin tip="Loading" size="large">
-                        <div className="loading-information" />
+                        <div className="users__loading-information" />
                     </Spin>
                 </Space>
             </div>
         )
     }
     return (
-                <Form className='user-form'
+                <Form className='users__user-form'
                     name="basic"
                     autoComplete="off"
                     initialValues={userEdit}
                     onFinish={onFinish}>
-                    <div className='btn-return'>
+                    <div className='users__user-form_btn-return'>
                         <Button onClick={() => onReturnBtnClick()}>
                             <ArrowLeftOutlined />
                             Return
                         </Button>
                     </div>
-                    <div className='user-form-avatar'>
+                    <div className='users__user-form_avatar'>
                         <Form.Item
                             name="avatar">
-                            <img src={userEdit.avatar} alt=""/>
+                            <img src={userEdit.avatar} alt="avatar"/>
                         </Form.Item>
                     </div>
                     <div>
@@ -101,7 +101,6 @@ export default function UserForm() {
                         <Input />
                     </Form.Item>
                     </div>
-
                     <div>
                         <p>Email</p>
                         <Form.Item name="email" style={{
@@ -118,7 +117,7 @@ export default function UserForm() {
                         </Form.Item>
                         <Form.Item justify='center'
                                    wrapperCol={{span: 10}}>
-                            <Button className='user-btn' htmlType="submit">
+                            <Button className='users__user-list_main-btn' htmlType="submit">
                                 Save
                             </Button>
                         </Form.Item>

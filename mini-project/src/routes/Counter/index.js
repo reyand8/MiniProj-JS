@@ -25,15 +25,15 @@ export default function Counter() {
     }
 
     return (
-        <div className='Counter'>
+        <div className='counter'>
             <div>
                 <h2>Counter:</h2>
                 <h1>{count}</h1>
-                <button className='minus' onClick={onClickMinus}>- Minus</button>
-                <button className='plus' onClick={onClickPlus}>+ Plus</button>
+                <button className='counter__minus' onClick={onClickMinus}>- Minus</button>
+                <button className='counter__plus' onClick={onClickPlus}>+ Plus</button>
             </div>
-            <div className='modal-block'>
-                <button className='open-modal-btn' onClick={() => setOpen(true)}>Finish ✨</button>
+            <div className='counter__modal-block'>
+                <button className='counter__open-block_btn' onClick={() => setOpen(true)}>Finish ✨</button>
                 <Modal open={open} setOpen={setOpen}>
                     <h3>Thank you!</h3>
                     <img src="https://media.giphy.com/media/NSPRepE2PvAcg/giphy.gif" alt='gif'/>

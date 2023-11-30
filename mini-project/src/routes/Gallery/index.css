@@ -4,14 +4,13 @@ body {
   font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #eff0f1;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.App {
+.gallery {
   padding: 50px;
   width: 100%;
   max-width: 1200px;
@@ -21,11 +20,11 @@ h1 {
   font-family: "Merriweather", serif;
 }
 
-.tags {
+.gallery__tags {
   list-style: none;
   padding: 0;
 }
-.tags li {
+.gallery__tags li {
   display: inline-block;
   padding: 12px 18px;
   background-color: #fff;
@@ -37,15 +36,15 @@ h1 {
   border: 1px solid transparent;
   transition: all 0.15s ease-in-out;
 }
-.tags li:hover {
+.gallery__tags li:hover {
   border-color: #000;
 }
-.tags li.active {
+.gallery__tags li.active {
   background-color: #000;
   color: #fff;
 }
 
-.content {
+.gallery__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
@@ -53,17 +52,17 @@ h1 {
   margin-top: 40px;
 }
 @media (max-width: 1000px) {
-  .content {
+  .gallery__content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 @media (max-width: 600px) {
-  .content {
+  .gallery__content {
     grid-template-columns: repeat(1, 1fr);
   }
 }
 
-.collection {
+.gallery__collection {
   max-width: 470px;
   background-color: #fff;
   padding: 30px;
@@ -72,47 +71,47 @@ h1 {
   cursor: pointer;
   transition: all 0.15s ease-in-out;
 }
-.collection h4 {
+.gallery__collection h4 {
   margin: 0;
   margin-top: 15px;
   font-size: 20px;
   font-family: "Merriweather", serif;
 }
-.collection:hover {
+.gallery__collection:hover {
   box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
   transform: translateY(-5px);
 }
 @media (max-width: 1000px) {
-  .collection {
+  .gallery__collection {
     width: 100%;
   }
 }
-.collection img {
+.gallery__collection img {
   object-fit: cover;
 }
-.collection__big {
+.gallery__collection_big {
   height: 250px;
   width: 100%;
   border-radius: 20px;
   margin-bottom: 15px;
 }
-.collection__bottom {
+.gallery__collection_bottom {
   display: flex;
   justify-content: space-between;
 }
-.collection__mini {
+.gallery__collection_mini {
   width: 31%;
   height: 80px;
   border-radius: 20px;
 }
 
-.top {
+.gallery__top {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.search-input {
+.gallery__search-input {
   font-size: 16px;
   width: 250px;
   height: 50px;
@@ -122,17 +121,17 @@ h1 {
   outline: none;
   transition: all 0.15s ease-in-out;
 }
-.search-input:focus {
+.gallery__search-input:focus {
   border: 1px solid rgba(0, 0, 0, 0.4);
 }
 
-.pagination {
+.gallery__pagination {
   list-style: none;
   padding: 0;
   margin: 0;
   margin-top: 40px;
 }
-.pagination li {
+.gallery__pagination li {
   display: inline-block;
   padding: 10px 17px;
   background-color: white;
@@ -142,7 +141,7 @@ h1 {
   border: 1px solid rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.pagination li.active {
+.gallery__pagination li.active {
   background-color: black;
   color: #fff;
 }

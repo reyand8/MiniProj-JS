@@ -24,7 +24,7 @@ export function User({obj, onClickInvite, isInvited}) {
         <li>
             <div>
                 <img className="avatar" src={avatar} alt="User" />
-                <div className='user-list__info'>
+                <div className='users__user-item__info'>
                     <h3>{firstName} {lastName}</h3>
                     <p>
                         <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">

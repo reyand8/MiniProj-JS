@@ -6,14 +6,13 @@ body {
   Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #eff0f1;
 }
 
 * {
   box-sizing: border-box;
 }
 
-.App {
+.gallery {
   padding: 50px;
   width: 100%;
   max-width: 1200px;
@@ -23,7 +22,7 @@ h1 {
   font-family: 'Merriweather', serif;
 }
 
-.tags {
+.gallery__tags {
   list-style: none;
   padding: 0;
 
@@ -50,7 +49,7 @@ h1 {
   }
 }
 
-.content {
+.gallery__content {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 30px;
@@ -66,7 +65,7 @@ h1 {
   }
 }
 
-.collection {
+.gallery__collection {
   max-width: 470px;
   background-color: #fff;
   padding: 30px;
@@ -95,32 +94,32 @@ h1 {
     object-fit: cover;
   }
 
-  &__big {
+  &_big {
     height: 250px;
     width: 100%;
     border-radius: 20px;
     margin-bottom: 15px;
   }
 
-  &__bottom {
+  &_bottom {
     display: flex;
     justify-content: space-between;
   }
 
-  &__mini {
+  &_mini {
     width: 31%;
     height: 80px;
     border-radius: 20px;
   }
 }
 
-.top {
+.gallery__top {
   display: flex;
   align-items: center;
   flex-wrap: wrap;
 }
 
-.search-input {
+.gallery__search-input {
   font-size: 16px;
   width: 250px;
   height: 50px;
@@ -135,7 +134,7 @@ h1 {
   }
 }
 
-.pagination {
+.gallery__pagination {
   list-style: none;
   padding: 0;
   margin: 0;

@@ -6,6 +6,7 @@ import Home from './routes/Home/index'
 import Counter from './routes/Counter/index'
 import Quiz from "./routes/Quiz"
 import './App.css'
+import './index.css'
 import UserRoutes from "./routes/Users/Users/UserRoutes";
 import Gallery from "./routes/Gallery/Gallery";
 

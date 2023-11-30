@@ -36,7 +36,7 @@ export default function UserList() {
     }
 
     return (
-        <div className="user-list">
+        <div className="users__user-list">
             {success ? (<Success count={invites.length}/>) :
                     <Users
                     searchValue={searchValue}
