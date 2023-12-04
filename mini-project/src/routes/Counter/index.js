@@ -1,4 +1,6 @@
 import './index.scss'
+import '../../App.css'
+import '../../index.css'
 import {useState} from "react";
 
 const Modal = ({open, setOpen, children}) => (

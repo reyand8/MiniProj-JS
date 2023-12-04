@@ -1,3 +1,13 @@
+.home-page {
+    font-size: 42px;
+}
+
+.home {
+    display: flex;
+    margin-top: 40px;
+    justify-content: space-around;
+}
+
 .ant-layout {
     background-color: #dfe2ff;
 }

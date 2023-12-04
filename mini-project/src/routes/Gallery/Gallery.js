@@ -1,5 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './index.scss';
+import '../../App.css'
+import '../../index.css'
 import {Collection} from "./Collection";
 
 const categories = [
