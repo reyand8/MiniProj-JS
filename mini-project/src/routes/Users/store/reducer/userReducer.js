@@ -4,19 +4,19 @@ import {
     ACTION_UPDATE_USER,
     ACTION_CREATE_EDIT,
     ACTION_SET_LIST,
-} from '../actions/index'
+} from '../actions/index';
 
 export const DEFAULT_DATA = {
     firstName: '',
     lastName: '',
     email: '',
     avatar: '',
-}
+};
 
 const initialState = {
     list: [],
-    userEdit: DEFAULT_DATA
-}
+    userEdit: DEFAULT_DATA,
+};
 
 export default function userReducer(state=initialState, {type, payload} ) {
     switch (type) {
@@ -25,22 +25,22 @@ export default function userReducer(state=initialState, {type, payload} ) {
                 ...state,
                 list: [
                     ...state.list,
-                    {...payload}
-                ]
-            }
+                    {...payload},
+                ],
+            };
         }
         case ACTION_DELETE_USER: {
-            const newList = state.list.filter(user => user.id !== payload.id)
-            return {...state, list: newList }
+            const newList = state.list.filter(user => user.id !== payload.id);
+            return {...state, list: newList };
         }
         case ACTION_UPDATE_USER: {
-            const updateList = state.list.map(user => user.id === payload.id ? payload : user)
-            return {...state, list: updateList, userEdit : DEFAULT_DATA }
+            const updateList = state.list.map(user => user.id === payload.id ? payload : user);
+            return {...state, list: updateList, userEdit : DEFAULT_DATA };
         }
         case ACTION_CREATE_EDIT: {
-            return {...state, userEdit: payload }
+            return {...state, userEdit: payload };
         }
-        case ACTION_SET_LIST: return { ...state, list: payload }
-        default: return state
+        case ACTION_SET_LIST: return { ...state, list: payload };
+        default: return state;
     }
 }

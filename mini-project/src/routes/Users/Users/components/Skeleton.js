@@ -41,4 +41,4 @@ export const Skeleton = () => (
         </ContentLoader>
     </div>
 
-)
+);

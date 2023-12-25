@@ -1,22 +1,22 @@
 import React from 'react';
-import {Button, Dropdown} from "antd";
-import {DeleteOutlined, EditOutlined} from "@ant-design/icons";
-import {useDispatch} from "react-redux";
-import {useNavigate} from "react-router-dom";
-import {createEditUser, deleteUser} from "../../store/actions";
+import {Button, Dropdown} from 'antd';
+import {DeleteOutlined, EditOutlined} from '@ant-design/icons';
+import {useDispatch} from 'react-redux';
+import {useNavigate} from 'react-router-dom';
+import {createEditUser, deleteUser} from '../../store/actions';
 
 
 export function User({obj, onClickInvite, isInvited}) {
-    const dispatch = useDispatch()
-    const navigate = useNavigate()
-    const {firstName, lastName, avatar, email, id} = obj
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
+    const {firstName, lastName, avatar, email, id} = obj;
     function onDeleteClick(user) {
-        dispatch(deleteUser(user))
+        dispatch(deleteUser(user));
     }
 
     function onEditBtnClick(user) {
-        dispatch(createEditUser(user))
-        navigate(`/users/${user.id}/edit/`)
+        dispatch(createEditUser(user));
+        navigate(`/users/${user.id}/edit/`);
     }
 
     return (
@@ -24,7 +24,7 @@ export function User({obj, onClickInvite, isInvited}) {
         <li>
             <div>
                 <img className="avatar" src={avatar} alt="User" />
-                <div className='users__user-item__info'>
+                <div className="users__user-item__info">
                     <h3>{firstName} {lastName}</h3>
                     <p>
                         <svg viewBox="0 0 96 96" xmlns="http://www.w3.org/2000/svg">
@@ -45,26 +45,26 @@ export function User({obj, onClickInvite, isInvited}) {
                     menu={{
                         items:
                             [{
-                                    key: '1',
-                                    label:
+                                key: '1',
+                                label:
                                         <Button onClick={() => onEditBtnClick(obj)} type="link">
                                             <EditOutlined />
                                             Edit
-                                        </Button>
-                                },
-                                {
-                                    key: '2',
-                                    label:
+                                        </Button>,
+                            },
+                            {
+                                key: '2',
+                                label:
                                     <Button onClick={() => onDeleteClick(obj)} danger type="text">
                                         <DeleteOutlined />
                                         Delete
-                                    </Button>
-                                }
-                        ]}}
+                                    </Button>,
+                            },
+                            ]}}
                     placement="bottomLeft">
                     <EditOutlined />
                 </Dropdown>
             </div>
         </li>
-    )
+    );
 }

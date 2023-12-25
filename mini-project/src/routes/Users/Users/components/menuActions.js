@@ -1,15 +1,15 @@
-import React from "react";
-import {Button} from "antd";
-import {deleteUser} from '../../store/actions/index'
+import React from 'react';
+import {Button} from 'antd';
+import {deleteUser} from '../../store/actions/index';
 
 export function menuActions({dispatch, navigate, user}) {
 
     function onDeleteClick(user) {
-        dispatch(deleteUser(user))
+        dispatch(deleteUser(user));
     }
 
     function onEditBtnClick(user) {
-        navigate(`/waiters/${user.id}/edit/`)
+        navigate(`/waiters/${user.id}/edit/`);
     }
     return [
         {
@@ -28,7 +28,7 @@ export function menuActions({dispatch, navigate, user}) {
                 </Button>
 
             ),
-        }
-    ]
+        },
+    ];
 
 }

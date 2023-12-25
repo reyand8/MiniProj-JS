@@ -1,7 +1,7 @@
 import './index.scss';
-import {useState} from "react";
-import '../../App.css'
-import '../../index.css'
+import {useState} from 'react';
+import '../../App.css';
+import '../../index.css';
 
 const questions = [
     {
@@ -53,7 +53,7 @@ const questions = [
 function Result({correct}) {
     return (
         <div className="quiz__result">
-            <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt='result-img'/>
+            <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt="result-img"/>
             <h2>You have {correct} points of {questions.length}</h2>
             <a href="/quiz/">
                 <button>Try again</button>
@@ -64,35 +64,35 @@ function Result({correct}) {
 }
 
 function Game({step, question, onClickVariant}) {
-    const [input, setInput] = useState('')
-    const {title, variants, type} = question
-    const percentage = Math.round((step / questions.length) * 100)
+    const [input, setInput] = useState('');
+    const {title, variants, type} = question;
+    const percentage = Math.round((step / questions.length) * 100);
 
     function onInputChange(e) {
-        setInput(e.target.value)
+        setInput(e.target.value);
     }
     function onSubmit(e) {
-        e.preventDefault()
-        setInput('')
-        onClickVariant(input)
+        e.preventDefault();
+        setInput('');
+        onClickVariant(input);
     }
 
     function askQuestions() {
         if (type === 'question') {
             question = <ul>
-                            {variants.map((text, index) =>
-                                <li onClick={() => onClickVariant(text)} key={index}>{text}</li>
-                        )}
-                        </ul>
+                {variants.map((text, index) =>
+                    <li onClick={() => onClickVariant(text)} key={index}>{text}</li>
+                )}
+            </ul>;
         }
         else if (type === 'input') {
             question =
-                    <form className='quiz__input-question' onSubmit={onSubmit}>
-                        <input maxLength="4" type='text' value={input} onChange={onInputChange} key={7771}/>
-                        <button className='quiz__btn-step'>Next Step</button>
-                    </form>
+                    <form className="quiz__input-question" onSubmit={onSubmit}>
+                        <input maxLength="4" type="text" value={input} onChange={onInputChange} key={7771}/>
+                        <button className="quiz__btn-step">Next Step</button>
+                    </form>;
         }
-        return question
+        return question;
     }
 
     return (
@@ -103,21 +103,21 @@ function Game({step, question, onClickVariant}) {
             <h1>{title}</h1>
             {askQuestions()}
         </>
-    )
+    );
 }
 
 function Quiz() {
-    const [step, setStep] = useState(0)
-    const [correct, setCorrect] = useState(0)
-    const question = questions[step]
+    const [step, setStep] = useState(0);
+    const [correct, setCorrect] = useState(0);
+    const question = questions[step];
     const onClickVariant = (selected) => {
-        setStep(step + 1)
+        setStep(step + 1);
         if (selected === question.correct) {
-            setCorrect(correct + 1)
+            setCorrect(correct + 1);
         }
-    }
+    };
     return (
-        <div className='quiz__quiz-main'>
+        <div className="quiz__quiz-main">
             <div className="quiz__quiz-app">
                 {
                     step !== questions.length ?
@@ -126,7 +126,7 @@ function Quiz() {
                 }
             </div>
         </div>
-    )
+    );
 }
 
 export default Quiz;

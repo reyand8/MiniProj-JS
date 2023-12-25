@@ -1,7 +1,7 @@
-import './index.scss'
-import '../../App.css'
-import '../../index.css'
-import {useState} from "react";
+import './index.scss';
+import '../../App.css';
+import '../../index.css';
+import {useState} from 'react';
 
 const Modal = ({open, setOpen, children}) => (
     <div className={`overlay animated ${open ? 'show' : ''}`}>
@@ -13,34 +13,34 @@ const Modal = ({open, setOpen, children}) => (
             {children}
         </div>
     </div>
-)
+);
 
 export default function Counter() {
-    const [count, setCount] = useState(0)
-    const [open, setOpen] = useState(false)
+    const [count, setCount] = useState(0);
+    const [open, setOpen] = useState(false);
     const onClickPlus = () => {
-        setCount(count + 1)
-    }
+        setCount(count + 1);
+    };
 
     const onClickMinus = () => {
-        setCount(count -1)
-    }
+        setCount(count -1);
+    };
 
     return (
-        <div className='counter'>
+        <div className="counter">
             <div>
                 <h2>Counter:</h2>
                 <h1>{count}</h1>
-                <button className='counter__minus' onClick={onClickMinus}>- Minus</button>
-                <button className='counter__plus' onClick={onClickPlus}>+ Plus</button>
+                <button className="counter__minus" onClick={onClickMinus}>- Minus</button>
+                <button className="counter__plus" onClick={onClickPlus}>+ Plus</button>
             </div>
-            <div className='counter__modal-block'>
-                <button className='counter__open-block_btn' onClick={() => setOpen(true)}>Finish ✨</button>
+            <div className="counter__modal-block">
+                <button className="counter__open-block_btn" onClick={() => setOpen(true)}>Finish ✨</button>
                 <Modal open={open} setOpen={setOpen}>
                     <h3>Thank you!</h3>
-                    <img src="https://media.giphy.com/media/NSPRepE2PvAcg/giphy.gif" alt='gif'/>
+                    <img src="https://media.giphy.com/media/NSPRepE2PvAcg/giphy.gif" alt="gif"/>
                 </Modal>
             </div>
         </div>
-    )
+    );
 }

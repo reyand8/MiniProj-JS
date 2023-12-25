@@ -9,5 +9,5 @@ export const Success = ({ count }) => {
             <button onClick={() => window.location.reload()} className="
             users__user-list_main-btn users__user-list_invite-btn">Return</button>
         </div>
-    )
-}
+    );
+};
