@@ -32,7 +32,6 @@ export default function UserForm() {
         navigate('/users');
     }
     if (id && !userEdit?.id) {
-        console.log(userEdit?.id);
         return (
             <div className="users__data-loading">
                 <Space>
