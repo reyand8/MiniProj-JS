@@ -1,10 +1,10 @@
+import React from 'react';
 import {useDispatch, useSelector} from 'react-redux';
 import {useNavigate, useParams} from 'react-router-dom';
 import {useEffect} from 'react';
 import {selectUserEdit} from '../store/selectors';
 import {fetchOneUser, save} from '../store/actions';
 import {Button, Form, Input, Space, Spin} from 'antd';
-
 import '../index.css';
 import {ArrowLeftOutlined} from '@ant-design/icons';
 

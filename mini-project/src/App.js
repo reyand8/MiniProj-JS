@@ -1,4 +1,4 @@
-import './App.css';
+import React from 'react';
 import {Layout, Menu} from 'antd';
 import {menu} from './menu.js';
 import {Route, Routes} from 'react-router-dom';
