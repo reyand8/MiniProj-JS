@@ -4,6 +4,8 @@ import {DeleteOutlined, EditOutlined} from '@ant-design/icons';
 import {useDispatch} from 'react-redux';
 import {useNavigate} from 'react-router-dom';
 import {createEditUser, deleteUser} from '../../store/actions';
+import Minus from '@icons/minus.svg';
+import Plus from '@icons/plus.svg';
 
 
 export function User({obj, onClickInvite, isInvited}) {
@@ -37,7 +39,7 @@ export function User({obj, onClickInvite, isInvited}) {
                 <img
                     onClick={() => onClickInvite(parseInt(id))}
                     className="action"
-                    src={`/icons/${isInvited ? 'minus':'plus'}.svg`}
+                    src={`${isInvited ? Minus : Plus}`}
                     alt="Action" />
                 <Dropdown
                     className="action"
