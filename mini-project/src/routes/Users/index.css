@@ -142,8 +142,6 @@ body {
   color: #182170;
 }
 .users__user-list_user-items li p {
-  display: flex;
-  align-items: center;
   font-size: 14px;
   color: rgba(0, 0, 0, 0.5);
   margin: 3px 0 0 0;
@@ -205,12 +203,26 @@ body {
     transform: scale(1);
   }
 }
+@media screen and (min-width: 451px) {
+  .users__user-list_user-items li p {
+    display: flex;
+    align-items: center;
+  }
+}
 @media screen and (max-width: 450px) {
   .users__user-item__info {
     font-size: 12px;
   }
-  .users-list li p {
+  li p {
     display: none;
+  }
+}
+@media screen and (max-width: 350px) {
+  .users__user-list_user-items li img.avatar {
+    display: none;
+  }
+  .users__user-item__info {
+    font-size: 10px;
   }
 }
 
