@@ -2,7 +2,7 @@ import React from 'react';
 import {Route, Routes} from 'react-router-dom';
 import UserList from './UserList';
 import UserForm from './UserForm';
-import NotFound from './NotFound';
+import NotFound from '../../NotFound';
 
 export default function UserRoutes() {
     return (

@@ -19,12 +19,12 @@ function App() {
             </Layout.Header>
             <Layout>
                 <Layout.Content className="main-content">
-                    <Routes>
+                <Routes>
                         <Route path="/" element={<Home />}/>
                         <Route path="/counter" element={<Counter />}/>
                         <Route path="/quiz" element={<Quiz />}/>
-                        <Route path="/users/*" element={<UserRoutes/>}/>
                         <Route path="/gallery" element={<Gallery/>}/>
+                        <Route path="/users/*" element={<UserRoutes/>}/>
                         <Route path="/*" element={<NotFound/>}/>
                     </Routes>
                 </Layout.Content>
