@@ -55,7 +55,7 @@ function Result({correct}) {
     return (
         <div className="quiz__result">
             <img src="https://cdn-icons-png.flaticon.com/512/2278/2278992.png" alt="result-img"/>
-            <h2>You have {correct} points of {questions.length}</h2>
+            <h2>You have {correct} points out of {questions.length}</h2>
             <a href="/quiz">
                 <button>Try again</button>
             </a>
