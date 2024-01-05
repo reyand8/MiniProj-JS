@@ -4,7 +4,7 @@
 ## Contents 
 * [Main Information](#📜-Main-Information)
 * [Stack](#Stack)
-* [Installation and usage](#Installation-and-usage)
+* [Installation and usage](#Installation-and-Usage)
 * [Examples](#Examples)
 
 ____
@@ -41,7 +41,7 @@ ____
 
 ____
 
-## Installation and usage
+## Installation and Usage
 
 **Installation:**
 
