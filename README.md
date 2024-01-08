@@ -35,7 +35,9 @@ ____
 
 ✅ React
 
-✅ Redux 
+✅ Redux
+
+✅ Redux Thunk
 
 ✅ Webpack
 
